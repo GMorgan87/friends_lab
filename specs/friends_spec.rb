@@ -114,9 +114,14 @@ class TestFriends < MiniTest::Test
     assert_equal(3, @person1[:friends].length())
   end
   #
-  # 6. Find the total of everyone's money
+  # 6. Find the total of everyones money
   # (hint: use the @people array, remember how we checked the total number of eggs yesterday?)
-  #
+
+  def test_total_money
+    result = total_money(@people)
+    assert_equal(143, result)
+  end
+
   #
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
