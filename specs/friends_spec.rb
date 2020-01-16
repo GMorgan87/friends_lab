@@ -146,4 +146,9 @@ end
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
 
+def test_find_friendless
+  result = find_friendless(@people)
+  assert_equal(["Daphne"], result)
+end
+
 end

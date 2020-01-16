@@ -47,3 +47,13 @@ def get_foods(people)
   end
   return all_foods
 end
+
+def find_friendless(people)
+  friendless = []
+  for person in people
+    if person[:friends].length == 0
+      friendless.push(person[:name])
+    end
+  end
+  return friendless
+end
