@@ -18,3 +18,11 @@ end
 def add_friend(person, friend)
   person[:friends].push(friend)
 end
+
+def remove_friend(person, friend)
+  for name in person[:friends]
+    if name == friend
+      person[:friends].delete(friend)
+    end
+  end
+end
