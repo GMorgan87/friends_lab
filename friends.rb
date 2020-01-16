@@ -39,3 +39,11 @@ def lend_money(lender, borrower, amount)
   lender[:monies] -= amount
   borrower[:monies] += amount
 end
+
+def get_foods(people)
+  all_foods = []
+  for person in people
+    all_foods += person[:favourites][:snacks]
+  end
+  return all_foods
+end
